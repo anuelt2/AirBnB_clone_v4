@@ -6,6 +6,7 @@
     border: 1px solid #DDDDDD;
     border-radius: 4px;
 }
+
 button {
     position: absolute;
     font-size: 18px;
@@ -18,37 +19,63 @@ button {
     top: 15%;
     right: 30px;
 }
+
 button:hover {
     opacity: 0.9;
 }
+
 .filters div {
     display: inline-grid;
 }
+
 .filters h2 {
     margin-left: 15%;
     margin-top: 0;
     margin-bottom: 0;
     font-weight: 600;
 }
+
 .filters h3 {
     margin-left: 15%;
     margin-bottom: 0;
     font-weight: 600;
 }
+
 .filters h4 {
     margin-left: 15%;
     margin-top: 0;
     font-weight: 400;
     font-size: 14px;
+
+    /* Truncate h4 with ellipsis */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 100%;
+    max-width: 100%;
 }
+
 .locations {
     height: 100%;
     width: 25%;
     border-right: 1px solid #DDDDDD;
+
+    display: inline;
+    float: left;
+    vertical-align: middle;
+    position: relative;
+    line-height: 20px;
 }
+
 .amenities {
     height: 100%;
     width: 25%;
+
+    display: inline;
+    float: left;
+    vertical-align: middle;
+    position: relative;
+    line-height: 20px;
 }
 
 .popover {
@@ -58,7 +85,6 @@ button:hover {
     border-radius: 4px;
     background: #FAFAFA;
     padding-bottom: 15px;
-    height: 300px;
     overflow-y: scroll;
     scrollbar-width: none;
     max-height: 300px;
@@ -70,8 +96,12 @@ button:hover {
 
 .amenities .popover {
     padding: 10px 0;
-    margin-left: -5px;
+    margin-left: 0px;
     margin-top: 0%;
+
+    /* fix gap between top and parent bottom */
+    position: absolute;
+    top: 100%;
 }
 
 .amenities .popover ul{
@@ -80,12 +110,17 @@ button:hover {
 
 .locations .popover {
     margin-top: 0%;
+ 
+    /* fix gap between top and parent bottom */
+    position: absolute;
+    top: 100%;
 }
 .popover ul {
     list-style-type: none;
     padding-bottom: 10px;
     padding-left: 10px;
 }
+
 .popover ul li{
     padding: 4px;
     padding-left: 10px;
@@ -100,4 +135,12 @@ button:hover {
 .amenities:hover .popover,
 .locations:hover .popover {
     visibility: visible;
+
+    /* display for popover */
+    display: inline-block;
+}
+
+/* Space between checkbox and Amenity name */
+.amenities .popover input[type="checkbox"] {
+    margin-right: 10px;
 }
