@@ -99,3 +99,33 @@
 .user {
   margin-bottom: 1.5%;
 }
+
+/* Places Reviews */
+.reviews {
+	margin-top: 40px;
+	border-bottom: #DDDDDD 1px;
+}
+
+.reviews h2 {
+	font-size: 16px;
+}
+
+.reviews ul {
+	list-style-type: none;
+}
+
+.reviews h3 {
+	font-size: 14px;
+}
+
+.reviews p {
+	font-size: 12px;
+}
+
+.show_reviews {
+	margin-left: 25px;
+	font-size: 12px;
+	font-weight: normal;
+	color: #FF545F;
+	cursor: default;
+}
