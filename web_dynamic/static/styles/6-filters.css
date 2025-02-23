@@ -140,7 +140,9 @@ button:hover {
     display: inline-block;
 }
 
-/* Space between checkbox and Amenity name */
-.amenities .popover input[type="checkbox"] {
+/* Space between checkbox and popover li */
+.amenity, 
+.state, 
+.city {
     margin-right: 10px;
 }
