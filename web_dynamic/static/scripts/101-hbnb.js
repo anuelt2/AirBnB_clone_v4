@@ -1,8 +1,11 @@
 /* global $ */
 $(document).ready(function () {
-  /* Uncheck input checkboxes on page reload */
+  /* Uncheck input checkboxes on page reload
+   * filters scroll to top on page reload
+   */
 
   $('INPUT.amenity, INPUT.state, INPUT.city').prop('checked', false);
+  $('.popover').scrollTop(0);
 
   /* GET request to API to check status */
 
